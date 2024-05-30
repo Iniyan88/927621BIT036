@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const fetch = require("node-fetch");
 const jwt = require("jsonwebtoken");
+
 const cors = require("cors");
 const app = express();
 app.use(cors());
