@@ -75,12 +75,13 @@ app.get("/categories/:categoryname/products", async (req, res) => {
       );
       products.push(...productsData);
     }
-    return res.send(products);
+    return res.send({
+      message: "Products fetched successfully",
+      data: products,
+    });
   } catch (error) {
     console.error("Error fetching products:", error);
   }
-
-  res.send("Products fetched successfully");
 });
 
 app.listen(port, () => {
